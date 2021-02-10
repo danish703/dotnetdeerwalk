@@ -7,10 +7,17 @@
         <h1>My Form</h1>
         @using (Html.BeginForm())
         {
-            @Html.Label("Name","Name",new {@class="mylabel" })
-            @Html.TextBox("Name",null,new{@class="form-control",id="abc",placeholder="my placeholder"})
-
-        }
+            @Html.Label("Name", "Name", new { @class = "mylabel" })
+            @Html.TextBox("Name", null, new { @class = "form-control", id = "abc", placeholder = "my placeholder" })
+            <br />
+            @Html.Label("About", "About")
+            @Html.TextArea("About", null, new { @class = "form-control", cols = "50", rows = "20" })
+            <br />
+            @Html.Label("Gender", "Male")
+            @Html.RadioButton("Gender", "Male", true);
+            @Html.Label("Gender", "FeMale")
+            @Html.RadioButton("Gender", "Female", false);
+            }
     </div>
 </body>
 </html>
