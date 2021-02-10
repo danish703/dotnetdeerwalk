@@ -1,0 +1,16 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Title of the page</title>
+</head>
+<body>
+    <div>
+        <h1>My Form</h1>
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Name","Name",new {@class="mylabel" })
+            @Html.TextBox("Name",null,new{@class="form-control",id="abc",placeholder="my placeholder"})
+
+        }
+    </div>
+</body>
+</html>
