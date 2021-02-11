@@ -23,7 +23,19 @@ namespace Day1B.Controllers
             return View(allbook);
         }
 
+        [HttpGet]
         public ViewResult create() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult create(Book b)
+        {
+            if (ModelState.IsValid)
+            {
+                Book mybook = bookRepository.AddBook(b);
+                return RedirectToAction("index");
+            }
             return View();
         }
 

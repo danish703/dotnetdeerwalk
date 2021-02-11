@@ -23,5 +23,13 @@ namespace Day1B.Repositories
         public List<Book> GetAllBook() {
             return _books;
         }
+
+        public Book AddBook(Book b)
+        {
+            int id = _books.Max(b => b.Id) + 1;
+            b.Id = id;
+            _books.Add(b);
+            return b;
+        }
     }
 }

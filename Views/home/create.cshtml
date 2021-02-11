@@ -2,23 +2,26 @@
 <h4>
     Create Book
 </h4>
-@using (Html.BeginForm()) { 
-@Html.TextBoxFor(model => model.Name, "", new { @class = "form-control" })
-
-@Html.LabelFor(model => model.Author)
-@Html.TextBoxFor(model => model.Author, "", new { @class = "form-control" })
-
-
-@Html.LabelFor(model => model.Publication)
-@Html.TextBoxFor(model => model.Publication, "", new { @class = "form-control" })
-
-
-@Html.LabelFor(model => model.Description)
-@Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
-
-
-@Html.LabelFor(model => model.CoverImage)
-@Html.TextBoxFor(model => model.CoverImage, "", new { @class = "form-control" })
-<hr/>
-<button type="submit" class="btn btn-success">Save</button>
+@using (Html.BeginForm("create", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.Name, "", new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Name)
+    <br />
+    @Html.LabelFor(model => model.Author)
+    @Html.TextBoxFor(model => model.Author, "", new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Author)
+    <br />
+    @Html.LabelFor(model => model.Publication)
+    @Html.TextBoxFor(model => model.Publication, "", new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Publication)
+    <br />
+    @Html.LabelFor(model => model.Description)
+    @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Description)
+    <br />
+    @Html.LabelFor(model => model.CoverImage)
+    @Html.TextBoxFor(model => model.CoverImage, "", new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.CoverImage)
+    <hr />
+    <button type="submit" class="btn btn-success">Save</button>
 }
