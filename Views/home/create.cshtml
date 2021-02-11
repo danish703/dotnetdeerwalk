@@ -1,0 +1,24 @@
+﻿@model Day1B.Models.Book
+<h4>
+    Create Book
+</h4>
+@using (Html.BeginForm()) { 
+@Html.TextBoxFor(model => model.Name, "", new { @class = "form-control" })
+
+@Html.LabelFor(model => model.Author)
+@Html.TextBoxFor(model => model.Author, "", new { @class = "form-control" })
+
+
+@Html.LabelFor(model => model.Publication)
+@Html.TextBoxFor(model => model.Publication, "", new { @class = "form-control" })
+
+
+@Html.LabelFor(model => model.Description)
+@Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+
+
+@Html.LabelFor(model => model.CoverImage)
+@Html.TextBoxFor(model => model.CoverImage, "", new { @class = "form-control" })
+<hr/>
+<button type="submit" class="btn btn-success">Save</button>
+}

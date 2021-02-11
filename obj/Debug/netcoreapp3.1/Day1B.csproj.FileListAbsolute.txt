@@ -31,3 +31,6 @@ C:\Users\Dipendra\source\repos\Day1B\Day1B\obj\Debug\netcoreapp3.1\Razor\Views\S
 C:\Users\Dipendra\source\repos\Day1B\Day1B\obj\Debug\netcoreapp3.1\Day1B.RazorTargetAssemblyInfo.cs
 C:\Users\Dipendra\source\repos\Day1B\Day1B\obj\Debug\netcoreapp3.1\Day1B.Views.pdb
 C:\Users\Dipendra\source\repos\Day1B\Day1B\obj\Debug\netcoreapp3.1\Day1B.csproj.CopyComplete
+C:\Users\Dipendra\source\repos\Day1B\Day1B\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Layout.cshtml.g.cs
+C:\Users\Dipendra\source\repos\Day1B\Day1B\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Dipendra\source\repos\Day1B\Day1B\obj\Debug\netcoreapp3.1\Razor\Views\home\create.cshtml.g.cs

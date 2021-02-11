@@ -1,23 +1,18 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Title of the page</title>
-</head>
-<body>
-    <div>
-        <h1>My Form</h1>
-        @using (Html.BeginForm())
-        {
-            @Html.Label("Name", "Name", new { @class = "mylabel" })
-            @Html.TextBox("Name", null, new { @class = "form-control", id = "abc", placeholder = "my placeholder" })
-            <br />
-            @Html.Label("About", "About")
-            @Html.TextArea("About", null, new { @class = "form-control", cols = "50", rows = "20" })
-            <br />
-            @Html.Label("Gender", "Male")
-            @Html.RadioButton("Gender", "Male", true);
-            @Html.Label("Gender", "FeMale")
-            @Html.RadioButton("Gender", "Female", false);
-            }
+﻿@model IEnumerable<Day1B.Models.Book>
+<div class="row">
+    @Html.ActionLink("Create", "create",new{ },new{@class="btn btn-primary"}) 
+</div>
+<div class="row">
+    @foreach(var book in Model) {
+    <div class="col-md-4" style="margin-top:2%;">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="@book.CoverImage" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@book.Name</h5>
+                <p class="card-text">@book.Description</p>
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+    }
+</div>
